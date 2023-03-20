@@ -1,0 +1,18 @@
+1. canvas 按鼠标绘制点，位置总是有偏差
+    原因：canvas使用了css进行宽高设置，使用css设置canvas宽高会对其进行缩放
+    导致比例不对。
+
+    解决办法：canvas宽高设置
+    原文链接：https://blog.csdn.net/XuM222222/article/details/82378594
+    关于canvas宽高的设置，常见的方法有三种：
+    1、直接设置<canvas>标签的width和height属性；
+    2、通过css样式进行设置；
+    3、通过js设置<canvas>标签的width和height属性。
+    方法1和3是最有效的设置canvas宽高的方法，
+    它会让canvas元素在页面中占据的宽高与画布的实际宽高一致；
+    尽量避免使用方法2（通过css样式设置canvas的宽高），
+    它会让canvas元素在页面中占据的宽高与画布的实际宽高不一致。
+
+2. 如何获得相对宽高?
+    const draw_x = e.pageX - canvas_ref.current.offsetLeft
+    const draw_y = e.pageY - canvas_ref.current.offsetTop

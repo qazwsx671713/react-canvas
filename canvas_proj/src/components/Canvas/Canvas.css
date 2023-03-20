@@ -1,0 +1,15 @@
+#canvas-container{
+    /* background-color: pink; */
+}
+#my_canvas{
+    display: block;
+    /* canvas. */
+    /* height: 300px;
+    width: 300px; */
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.header{
+    height: 20vh;
+
+}
